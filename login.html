@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js"></script>
+    <link rel="stylesheet" href="style_login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>login page</title>
+</head>
+<body>
+    <script type="module" src="./auth.js"></script>
+    <div class="wrapper">
+        <form action="">
+            <h1>Login</h1>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="login-email" name="email" placeholder="Email" required>
+                <ion-icon name="mail"></ion-icon>
+            </div>
+
+            <div class="form-group">
+                <input type="password" class="form-control" id="login-password" name="password" placeholder="Password" required>
+                <ion-icon name="lock-closed"></ion-icon>
+            </div>
+
+            <div class="remember-forget">
+                <label> 
+                    <input type="checkbox">Remember Me
+                </label>
+            </div>
+           
+                 <button type="button" id="login-btn" class="submit" >Login</button>
+
+
+            <div class="register-link">
+                <p>Don't have an account? <a href="signup.html" target="_blank">Register</a></p>
+            </div>
+        </form>
+    </div>
+    <script type="module" src="./firebase.js"></script>
+    
+</body>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

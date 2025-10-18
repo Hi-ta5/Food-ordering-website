@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thali Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.jpg">
+    <link rel= "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>cuisine page</title>
+    <link rel="stylesheet" href="cusine.css">
+</head>
+<body>
+    <!--side bars-->
+    <div class="sidebar">
+        <img src="images/logo.jpg" alt="img">
+        
+        <div class="sidebar-menu">
+            <a href="index.html"><ion-icon name="storefront-outline"></ion-icon>Home</a>
+            <a href="contact_us.html"><ion-icon name="chatbubbles-outline"></ion-icon>Contact Us</a>
+            <a href="#"><ion-icon name="people"></ion-icon>About Us</a>
+            <a href="thaliservice.html"><ion-icon name="home-outline"></ion-icon>Thali Service</a>
+            
+        </div>
+        <div class="logout"></div>
+    </div>
+    <!-- main -->
+    <div class="main">
+        <!-- main  navbar -->
+         <div class="main-navbar">
+            <!-- menu when appear  on mobile version-->
+             <ion-icon class="menu-toggle" name="menu-outline"></ion-icon>
+             <!-- search bar-->
+              <div class="search">
+                <input type="text" placeholder="What you want to eat?" id="searchInput">
+                <button class="search-btn" id="searchButton">Search</button>
+                <div class="result"></div>
+              </div>
+              <!-- profile icon on left side of navbar-->
+               <div class="profile">
+                    <a class="user" href="#"><ion-icon name="person-add-outline"></ion-icon></a>
+                    <a class="cart" href="#" onclick="toggleCartPopup()">
+                        <ion-icon name="cart-outline"></ion-icon>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </a>
+                    <a class="user" href="login.html"><ion-icon name="person-outline"></ion-icon> </a>               
+                </div>
+          </div>
+          <!--shopping cart section-->
+          <div id="cart-popup" class="cart-popup">
+            <h4>Shopping Cart</h4>
+            <table id="cart-item">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>#</th>
+                        <th>Prise(Rs)</th>
+                        <th>Total(Rs)</th>
+                    </tr>
+                </thead>
+            </table>
+            <p>Total(Rs) <span id="cart-total">0.00</span></p>
+            <a class="cart-close" onclick="closeCart()"><ion-icon name="close-circle-outline"></ion-icon></a>
+          </div>
+          <!--main highight-->
+          <div class="main-highlight">
+            
+          </div>
+
+     <div class="container">
+        
+        <hr class="divider">
+             <!--list of food menus -->
+             <div class="main-details">
+                <h2 class="main-title">Choose Order</h2>
+                <div class="detail-wrapper">
+                    <div class="detail-card">
+                        <img class="detail-img" src="images/thali/punjabi/p1.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>thali 1</h4>
+                                <p class="detail-sub">Juicy chicken patty with fresh veggies, packed with flavor in every bite!</p>
+                                <p class="price">Rs 199.00</p>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                         </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="images/thali/punjabi/p2.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>thali 2</h4>
+                                <p class="detail-sub">A delightful blend of fresh veggies and spices for a wholesome, tasty bite!</p>
+                                <p class="price">Rs 79.00</p>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div> 
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="images/thali/punjabi/p3.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>thali 3</h4>
+                                <p class="detail-sub">Crispy paneer patty topped with zesty sauces, a treat for paneer lovers!</p>
+                                <p class="price">Rs 129.00</p>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                         </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="images/thali/punjabi/p4.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>thali</h4>
+                                <p class="detail-sub">A royal experience with layers of flavors and a hearty bite!</p>
+                                <p class="price">Rs 189.00</p>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                         </div>
+                    </div>
+                    
+            <!-- Add more thali cards as needed -->
+        </div>
+        <button onclick="window.history.back()">Back to Cuisines</button>
+    </div>
+    <hr class="divider">
+         <div class="main-footer">
+            <a class="user" href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a class="user" href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a class="user" href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+            <a class="user" href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+         </div>
+    </div> 
+    <script src="script.js"></script>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

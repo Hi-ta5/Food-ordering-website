@@ -1,0 +1,219 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Food menu page</title>
+</head>
+<body>
+    <!--side bars-->
+    <div class="sidebar">
+        <img src="images/logo.jpg" alt="img">
+        
+        <div class="sidebar-menu">
+            <a href="index.html"><ion-icon name="storefront-outline"></ion-icon>Home</a>
+            <a href="contact_us.html"><ion-icon name="chatbubbles-outline"></ion-icon>Contact Us</a>
+            <a href="#"><ion-icon name="people"></ion-icon>About Us</a>
+            <a href="thaliservice.html"><ion-icon name="home-outline"></ion-icon>Thali Service</a>
+        </div>
+        <div class="logout"></div>
+    </div>
+    <!-- main -->
+    <div class="main">
+        <!-- main  navbar -->
+         <div class="main-navbar">
+            <!-- menu when appear  on mobile version-->
+             <ion-icon class="menu-toggle" name="menu-outline"></ion-icon>
+             <!-- search bar-->
+              <div class="search">
+                <input type="text" placeholder="What you want to eat?">
+                <button class="search-btn">Search</button>
+              </div>
+              <!-- profile icon on left side of navbar-->
+               <div class="profile">
+                <a class="cart" href="#" onclick="toggleCartPopup()">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+                    <a class="user" href="login.html"><ion-icon name="person-outline"></ion-icon> </a>               
+                </div>
+          </div>
+           <!--shopping cart section-->
+           <div id="cart-popup" class="cart-popup">
+            <h4>Shopping Cart</h4>
+            <table id="cart-item">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>#</th>
+                        <th>Prise(Rs)</th>
+                        <th>Total(Rs)</th>
+                    </tr>
+                </thead>
+            </table>
+            <p>Total(Rs) <span id="cart-total">0.00</span></p>
+            <a class="cart-close" onclick="closeCart()"><ion-icon name="close-circle-outline"></ion-icon></a>
+          </div>
+
+          
+          <!-- main menus / order -->
+           <div class="main-menus">
+            <!-- filter section -->
+             <div class="main-filter">
+                <div>
+                    <h2 class="main-title">Menu <br>Category</h2>
+                    <div class="main-arrow">
+                        <ion-icon class="back-menus" name="chevron-back-circle-outline"></ion-icon>
+                        <ion-icon class="next-menus" name="chevron-forward-circle-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="filter-wrapper">
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <a href="Burger.html"><ion-icon name="fast-food-outline"></ion-icon></a>
+                        </div>
+                        <div class="filter-title"><a href="Burger.html"><p>Burger</p></a></div>
+                        
+                    </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <a href="Pizza.html"><ion-icon name="pizza-outline"></ion-icon></a>
+                        </div>
+                        <div class="filter-title"><a href="Pizza.html"><p>Pizza</p></a></div>
+                    </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <a href="Wine.html"><ion-icon name="wine-outline"></ion-icon></a>
+                        </div>
+                        <div class="filter-title"><a href="Wine.html"><p>Wine</p></a></div>
+                    </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <a href="Starters.html"><ion-icon name="restaurant-outline"></ion-icon></a>
+                        </div>
+                        <div class="filter-title"><a href="Starters.html"><p>Starters</p></a></div>
+                    </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <a href="Coffee.html"><ion-icon name="cafe-outline"></ion-icon></a>
+                        </div>
+                        <div class="filter-title"><a href="Coffee.html"><p>Coffee</p></a></div>
+                    </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <a href="Seafood.html"><ion-icon name="fish-outline"></ion-icon></a>
+                        </div>
+                        <div class="filter-title"><a href="Seafood.html"><p>Seafood</p></a></div>
+                    </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <a href="Healty.html"><ion-icon name="nutrition-outline"></ion-icon></a>
+                        </div>
+                        <div class="filter-title"><a href="Healty.html"><p>Healthy</p></a></div>
+                    </div>
+                </div>
+             </div>
+             <hr class="divider">
+             <!--list of food menus -->
+             <div class="main-details">
+                <h2 class="main-title">Choose Order</h2>
+                <div class="detail-wrapper">
+                    <div class="detail-card">
+                        <img class="detail-img" src="images/healthy/Mixed Pulses .salad.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Mixed Pulses</h4>
+                                <p class="detail-sub">A protein-packed bowl of mixed pulses to fuel your day!</p>
+                                <p class="price">Rs 150.00</p>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                         </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="images/healthy/mixed vegetable.salad.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>mixed vegetable salad</h4>
+                                <p class="detail-sub">A colorful mix of fresh veggies for a healthy and crunchy bite."</p>
+                                <p class="price">Rs 200.00</p>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div> 
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="images/healthy/mixed fruit.salad.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Mixed Fruit</h4>
+                                <p class="detail-sub">A refreshing bowl of nature's sweetest fruits for a perfect snack.</p>
+                                <p class="price">Rs 250.00</p>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                         </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="images/healthy/mixed leafy.salad.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Mixed Leafy</h4>
+                                <p class="detail-sub">A vibrant medley of leafy greens to nourish your body and soul.</p>
+                                <p class="price">Rs 180.00</p>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                         </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="images/healthy/Walnuts.salad.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Walnuts</h4>
+                                <p class="detail-sub">Crunchy walnuts add the perfect twist to this wholesome salad.</p>
+                                <p class="price">Rs 250.00</p>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                         </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="images/healthy/chicken.salad.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Chicken Salad</h4>
+                                <p class="detail-sub">Tender chicken with fresh veggies for a satisfying and balanced meal.</p>
+                                <p class="price">Rs 280.00</p>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                         </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="images/healthy/veg sandwich.sald.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Veg Sandwich</h4>
+                                <p class="detail-sub">A hearty veg sandwich, packed with flavor and goodness.</p>
+                                <p class="price">Rs 50.00</p>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                         </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="images/healthy/mixed veg & egg .salad.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Mixed Veg & Egg Salad</h4>
+                                <p class="detail-sub">The perfect mix of veggies and eggs for a protein-rich treat.</p>
+                                <p class="price">Rs 250.00</p>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                         </div>
+                    </div>
+                </div>
+             </div>
+         </div>
+    </div> 
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</html>

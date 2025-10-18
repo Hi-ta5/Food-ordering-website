@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Listings</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.jpg">
+    <link rel="stylesheet" href="vegburger.css">
+
+    <link rel= "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>veg burger page</title>
+    
+</head>
+  <body>
+     <!--side bars-->
+     <div class="sidebar">
+        <img src="images/logo.jpg" alt="img">
+        
+        <div class="sidebar-menu">
+            <a href="index.html"><ion-icon name="storefront-outline"></ion-icon>Home</a>
+            <a href="contact_us.html"><ion-icon name="chatbubbles-outline"></ion-icon>Contact Us</a>
+            <a href="aboutus.html"><ion-icon name="people"></ion-icon>About Us</a>
+            <a href="thaliservice.html"><ion-icon name="home-outline"></ion-icon>Thali Service</a>
+            
+        </div>
+        <div class="logout"></div>
+    </div>
+    <!-- main -->
+    <div class="main">
+        <!-- main  navbar -->
+         <div class="main-navbar">
+            <!-- menu when appear  on mobile version-->
+             <ion-icon class="menu-toggle" name="menu-outline"></ion-icon>
+             <!-- search bar-->
+             <div></div>
+
+              <!-- profile icon on left side of navbar-->
+               <div class="profile">
+                    <a class="user" href="#"><ion-icon name="person-add-outline"></ion-icon></a>
+                    <a class="cart" href="#" onclick="toggleCartPopup()">
+                        <ion-icon name="cart-outline"></ion-icon>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </a>
+                    <a class="user" href="login.html"><ion-icon name="person-outline"></ion-icon></a>               
+                </div>
+          </div>
+          <!--shopping cart section-->
+          <div id="cart-popup" class="cart-popup">
+            <h4>Shopping Cart</h4>
+            <table id="cart-item">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>#</th>
+                        <th>Prise(Rs)</th>
+                        <th>Total(Rs)</th>
+                    </tr>
+                </thead>
+            </table>
+            <p>Total(Rs) <span id="cart-total">0.00</span></p>
+            <a class="cart-close" onclick="closeCart()"><ion-icon name="close-circle-outline"></ion-icon></a>
+          </div>
+          <!--main highight-->
+          <div class="main-highlight">
+            
+          </div>
+
+    <div class="container">
+
+        <div class="filters">
+            <button class="filter-btn">Veg Burger</button>
+            <a href="jain.html" class="detail-link"></a>
+            <button class="filter-btn">jain</button>
+            
+        </div>
+
+        <div class="grid">
+            <!-- Burger Item 1 -->
+            <div class="card">
+                <img src="images/nino.jpg" alt="Nino Burger">
+                <div style="position: relative; display: inline-block;">
+                    
+                    <img src="veg.jpg" alt="Overlay Image" 
+                         style="
+                             position: absolute;
+                             bottom: 10px; 
+                             right: -35px; 
+                             width: 20px; 
+                             height: 20px;">
+                <div class="details">
+                    <h3>Nino Burgers</h3>
+                    <p>Burger, Fast Food, American</p>
+                    <p>₹250 for one</p>
+                    <span class="rating">4.3★</span>
+                    <span class="time">36 min</span>
+                    
+                </div>
+               
+               
+                </div>
+                
+            </div>
+
+            <!-- Burger Item 2 -->
+            <div class="card">
+                <img src="images/grandma.jpg" alt="Grandmama's Cafe">
+
+                <img src="veg.jpg" alt="Overlay Image" 
+                style="
+                    position: absolute;
+                    bottom: 5px; 
+                    right: 15px; 
+                    width: 20px; 
+                    height: 20px;">
+                <div class="details">
+                    <h3>Grandmama's Cafe</h3>
+                    <p>Cafe, Italian, Continental</p>
+                    <p>₹650 for one</p>
+                    <span class="rating">4.0★</span>
+                    <span class="time">36 min</span>
+                </div>
+                
+            </div>
+
+            <!-- Burger Item 3 -->
+            <div class="card">
+                <img src="images/boba bhai.jpg" alt="Boba Bhai">
+                <img src="veg.jpg" alt="Overlay Image" 
+                style="
+                    position: absolute;
+                    bottom: 5px; 
+                    right: 15px; 
+                    width: 20px; 
+                    height: 20px;">
+                <div class="details">
+                    <h3>Boba Bhai</h3>
+                    <p>Bubble Tea, Burger, Fast Food</p>
+                    <p>₹150 for one</p>
+                    <span class="rating">4.1★</span>
+                    <span class="time">35 min</span>
+                </div>
+                
+            </div>
+
+            <!-- Burger Item 4 -->
+            <div class="card">
+                <img src="images/hub.jpg" alt="Burger Hub">
+                <img src="veg.jpg" alt="Overlay Image" 
+                style="
+                    position: absolute;
+                    bottom: 5px; 
+                    right: 15px; 
+                    width: 20px; 
+                    height: 20px;">
+                <div class="details">
+                    <h3>Burger Hub</h3>
+                    <p>Cafe, Italian, Continental</p>
+                    <p>₹100 for Two</p>
+                    <span class="rating">4.0★</span>
+                    <span class="time">36 min</span>
+                </div>
+                
+            </div>
+
+            <!-- Burger Item 5 -->
+            <div class="card">
+                <img src="images/haavn.jpg" alt="Burger Haavn">
+                <img src="veg.jpg" alt="Overlay Image" 
+                style="
+                    position: absolute;
+                    bottom: 5px; 
+                    right: 15px; 
+                    width: 20px; 
+                    height: 20px;">
+                <div class="details">
+                    <h3>Burger Haven</h3>
+                    <p>Cafe, Italian, Continental</p>
+                    <p>₹650 for one</p>
+                    <span class="rating">4.0★</span>
+                    <span class="time">36 min</span>
+                </div>
+                
+            </div>
+
+             <!-- Burger Item 6 -->
+             <div class="card">
+                <img src="images/bitee.jpg" alt="Bite & Beyond">
+                <img src="veg.jpg" alt="Overlay Image" 
+                style="
+                    position: absolute;
+                    bottom: 5px; 
+                    right: 15px; 
+                    width: 20px; 
+                    height: 20px;">
+                <div class="details">
+                    <h3>Bite & Beyond</h3>
+                    <p>Bubble Tea, Burger, Fast Food</p>
+                    <p>₹150 for one</p>
+                    <span class="rating">4.1★</span>
+                    <span class="time">35 min</span>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</html>

@@ -1,0 +1,266 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.jpg">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <title>Food menu page</title>
+</head>
+
+<body>
+   
+    <!--side bars-->
+    <div class="sidebar">
+        <img src="images\logo.jpg" alt="img">
+
+        <div class="sidebar-menu">
+            <a href="index.html"><ion-icon name="storefront-outline"></ion-icon>Home</a>
+            <a href="contact_us.html"><ion-icon name="chatbubbles-outline"></ion-icon>Contact Us</a>
+            <a href="aboutus.html"><ion-icon name="people"></ion-icon>About Us</a>
+            <a href="thaliservice.html"><ion-icon name="home-outline"></ion-icon>Thali Service</a>
+
+        </div>
+        <div class="logout"></div>
+    </div>
+    <!-- main -->
+    <div class="main">
+        <!-- main  navbar -->
+        <div class="main-navbar">
+            <!-- menu when appear  on mobile version-->
+            <ion-icon class="menu-toggle" name="menu-outline"></ion-icon>
+            <!-- search bar-->
+            <div>
+                
+                <div class="result"></div>
+            </div>
+            <!-- profile icon on left side of navbar-->
+            <div class="profile">
+                <a class="user" href="partner_with_us.html"><ion-icon name="person-add-outline"></ion-icon></a>
+                <a class="cart" href="cart.html" onclick="toggleCartPopup()">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+                <a class="user" href="login.html"><ion-icon name="person-outline"></ion-icon> </a>
+            </div>
+        </div>
+        <!--shopping cart section-->
+        <div id="cart-popup" class="cart-popup">
+            <h4>Shopping Cart</h4>
+            <table id="cart-item">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>#</th>
+                        <th>Prise(Rs)</th>
+                        <th>Total(Rs)</th>
+                    </tr>
+                </thead>
+            </table>
+            <p>Total(Rs) <span id="cart-total">0.00</span></p>
+            <a class="cart-close" onclick="closeCart()"><ion-icon name="close-circle-outline"></ion-icon></a>
+        </div>
+        
+        
+        <div class="svg-slideshow">
+            <div class="slide">
+                <img src="images/grandma.jpg" alt="SVG Image 1">
+            </div>
+            <div class="slide">
+                <img src="images/hub.jpg" alt="SVG Image 2">
+            </div>
+            <div class="slide">
+                <img src="images/bitee.jpg" alt="SVG Image 3">
+            </div>
+            <div class="slide">
+                <img src="images/haavn.jpg" alt="SVG Image 4">
+            </div>
+        </div>
+        
+        
+            <!-- Existing Recommendations Section -->
+        
+        
+        <!-- main highlight-->
+        <div class="main-highliht">
+            <!--title section and arrow-->
+            <div class="main-header">
+                <h2 class="main-title">Recommendations</h2>
+                <div class="main-arrow">
+                    <ion-icon class="back" name="chevron-back-circle-outline"></ion-icon>
+                    <ion-icon class="next" name="chevron-forward-circle-outline"></ion-icon>
+                </div>
+            </div>
+            <!--highlight menu-->
+            <div class="highlight-wrapper">
+                <div class="highlight-card">
+                    <a href="Healty.html"><img class="highlight-img" src="images/salad.jpg">
+                        <div class="highlight-desc">
+                            <h4>Fresh Salad</h4>
+                            <p>Rs 60.00</p>
+                    </a>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <a href="Coffee.html"><img class="highlight-img" src="images/coffee.jpg">
+                    <div class="highlight-desc">
+                        <h4>Cafe Latte</h4>
+                </a>
+                <p>Rs 250.00</p>
+            </div>
+        </div>
+        <div class="highlight-card">
+            <a href="Starters.html"><img class="highlight-img" src="images/chicken.jpg">
+                <div class="highlight-desc">
+                    <h4>Chicken wings</h4>
+                    <p>Rs 450.00</p>
+            </a>
+        </div>
+    </div>
+    <div class="highlight-card">
+        <a href="Burger.html"><img class="highlight-img" src="images/burger.jpg">
+            <div class="highlight-desc">
+                <h4>Big Burger</h4>
+                <p>Rs 100.00</p>
+        </a>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- main menus / order -->
+    <div class="main-menus">
+        <!-- filter section -->
+        <div class="main-filter">
+            <div>
+                <h2 class="main-title">Menu <br>Category</h2>
+                <div class="main-arrow">
+                    <ion-icon class="back-menus" name="chevron-back-circle-outline"></ion-icon>
+                    <ion-icon class="next-menus" name="chevron-forward-circle-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="filter-wrapper">
+                <div class="filter-card">
+                    <div class="filter-icon">
+                        <a href="Burger.html"><ion-icon name="fast-food-outline"></ion-icon></a>
+                    </div>
+                    <div class="filter-title"><a href="Burger.html">
+                            <p>Burger</p>
+                        </a></div>
+
+                </div>
+                <div class="filter-card">
+                    <div class="filter-icon">
+                        <a href="Pizza.html"><ion-icon name="pizza-outline"></ion-icon></a>
+                    </div>
+                    <div class="filter-title"><a href="Pizza.html">
+                            <p>Pizza</p>
+                        </a></div>
+                </div>
+                <div class="filter-card">
+                    <div class="filter-icon">
+                        <a href="Wine.html"><ion-icon name="wine-outline"></ion-icon></a>
+                    </div>
+                    <div class="filter-title"><a href="Wine.html">
+                            <p>Wine</p>
+                        </a></div>
+                </div>
+                <div class="filter-card">
+                    <div class="filter-icon">
+                        <a href="Starters.html"><ion-icon name="restaurant-outline"></ion-icon></a>
+                    </div>
+                    <div class="filter-title"><a href="Starters.html">
+                            <p>Starters</p>
+                        </a></div>
+                </div>
+                <div class="filter-card">
+                    <div class="filter-icon">
+                        <a href="Coffee.html"><ion-icon name="cafe-outline"></ion-icon></a>
+                    </div>
+                    <div class="filter-title"><a href="Coffee.html">
+                            <p>Coffee</p>
+                        </a></div>
+                </div>
+                <div class="filter-card">
+                    <div class="filter-icon">
+                        <a href="Seafood.html"><ion-icon name="fish-outline"></ion-icon></a>
+                    </div>
+                    <div class="filter-title"><a href="Seafood.html">
+                            <p>Seafood</p>
+                        </a></div>
+                </div>
+                <div class="filter-card">
+                    <div class="filter-icon">
+                        <a href="Healty.html"><ion-icon name="nutrition-outline"></ion-icon></a>
+                    </div>
+                    <div class="filter-title"><a href="Healty.html">
+                            <p>Healthy</p>
+                        </a></div>
+                </div>
+            </div>
+        </div>
+        <hr class="divider">
+        <!--list of food menus -->
+        <div class="main-header">
+            <h2 class="main-title">Offers Available </h2>
+            <div class="main-arrow">
+                <ion-icon class="back" name="chevron-back-circle-outline"></ion-icon>
+                <ion-icon class="next" name="chevron-forward-circle-outline"></ion-icon>
+            </div>
+        </div>
+        <!--highlight menu-->
+        <div class="highlight-wrapper">
+            <div class="highlight-card">
+                <a href="#"><img class="highlight-img" src="images/buyonegetone.jpeg">
+                    <div class="highlight-desc">
+                        <h4>Buy One Get One Free Drink</h4>
+                </a>
+            </div>
+        </div>
+        <div class="highlight-card">
+            <a href="#"><img class="highlight-img" src="images/combooffer.png">
+                <div class="highlight-desc">
+                    <h4>Combo Offer</h4>
+            </a>
+        </div>
+    </div>
+    <div class="highlight-card">
+        <a href="#"><img class="highlight-img"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwH_pfdG6zxx432ZHtRRp0MRb2VEfK-eyW3XzIEZPDkNN3g1DJ58_gYTcLVycd03Vqsus&usqp=CAU">
+            <div class="highlight-desc">
+                <h4>Student Discout</h4>
+        </a>
+    </div>
+    </div>
+    <div class="highlight-card">
+        <a href="#"><img class="highlight-img" src="images/flat20.avif">
+            <div class="highlight-desc">
+                <h4>Flat 20% Off</h4>
+        </a>
+    </div>
+    </div>
+    <div class="highlight-card">
+        <a href="#"><img class="highlight-img" src="https://blog.yajny.com/wp-content/uploads/2022/12/Cover-3.jpg">
+            <div class="highlight-desc">
+                <h4>Cashbacks</h4>
+        </a>
+    </div>
+    </div>
+    </div>
+    </div>
+    <hr class="divider">
+    <div class="main-footer">
+        <a class="user" href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+        <a class="user" href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a class="user" href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+        <a class="user" href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</html>

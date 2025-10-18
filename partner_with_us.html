@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner With Us</title>
+    <link rel="stylesheet" href="partner_with_us.css">
+</head>
+
+<body>
+    <div class="image-container">
+        <img
+            src="https://media.gettyimages.com/id/1363885085/video/defocussed-image-of-two-business-women-meeting-and-having-a-discussion.jpg?s=640x640&k=20&c=0rEVTq-s0lY0756u6LNBE76KWybXzHguOmS4mgN7Lv8=">
+    </div>
+    <div class="image-overlay">
+        <h1>Partner With Us</h1>
+        <svg viewBox="0 0 400 50" xmlns="http://www.w3.org/2000/svg">
+            <text id="dynamic-text" x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-size="25"
+                fill="#333">
+                Loading...
+            </text>
+        </svg>
+
+        <script>
+            // Array of text values to cycle through
+            const texts = ["Boost Your Profits Today.", "Success Starts Here!", "Grow your business now!"];
+
+            // Reference to the <text> element
+            const dynamicText = document.getElementById("dynamic-text");
+
+            // Function to update the text content
+            let index = 0;
+            function updateText() {
+                dynamicText.textContent = texts[index];
+                index = (index + 1) % texts.length; // Cycle through the array
+            }
+
+            // Initial text update
+            updateText();
+
+            // Change text every 2 seconds (2000 milliseconds)
+            setInterval(updateText, 2000);
+        </script>
+    </div>
+    <div class="form-section">
+        <div class="form-container">
+            <h2>Register Your Account</h2>
+            <form id="registerForm" action="restdetails.html">
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <input type="password" id="password" placeholder="Create a password" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- Steps to Register -->
+    <section class="container">
+        <h2>Steps to Register</h2>
+        <ol>
+            <li><strong>Create an Account:</strong> Sign up by providing your basic information.</li>
+            <li><strong>Register Your Number:</strong> Enter your mobile number to verify your identity.</li>
+            <li><strong>Restaurant Details:</strong> Fill in your restaurant's details to complete the registration
+                process.</li>
+        </ol>
+    </section>
+    <section id="benefits">
+        <div class="container">
+            <h2>Why Partner With Us?</h2>
+            <ul>
+                <li>Get your restaurant noticed by thousands of food lovers through our platform.</li>
+                <li>Reach customers beyond your local area and tap into a broader market.</li>
+                <li>Get insights into your restaurant’s performance with detailed reports and analytics.</li>
+                <li>Join a community of satisfied restaurant owners who have seen tangible benefits from working with
+                    us.</li>
+                <li>Partnering with us allows your business to receive more orders, leading to higher revenue.</li>
+            </ul>
+        </div>
+    </section>
+    <section id="rules">
+        <div class="container">
+            <h2>Rules and Regulations</h2>
+            <p>By partnering with us, you agree to:</p>
+            <ul>
+                <li>Provide accurate and up-to-date information about your restaurant.</li>
+                <li>Maintain high standards of food quality and customer service.</li>
+                <li>Comply with local laws and regulations.</li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.jpg">
+    <link rel="stylesheet" href="thaliservice.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Thali Service - Cuisines</title>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="images/logo.jpg" alt="img">
+
+        <div class="sidebar-menu">
+            <a href="index.html"><ion-icon name="storefront-outline"></ion-icon>Home</a>
+            <a href="contact_us.html"><ion-icon name="chatbubbles-outline"></ion-icon>Contact Us</a>
+            <a href="aboutus.html"><ion-icon name="people"></ion-icon>About Us</a>
+            <a href="thaliservice.html"><ion-icon name="home-outline"></ion-icon>Thali Service</a>
+        </div>
+        <div class="logout"></div>
+    </div>
+
+    <!-- main -->
+    <div class="main">
+        <!-- main navbar -->
+        <div class="main-navbar">
+            <ion-icon class="menu-toggle" name="menu-outline"></ion-icon>
+           
+            <div class="profile">
+                <a class="user" href="#"><ion-icon name="person-add-outline"></ion-icon></a>
+                <a class="cart" href="#" onclick="toggleCartPopup()">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+                <a class="user" href="login.html"><ion-icon name="person-outline"></ion-icon></a>
+            </div>
+        </div>
+        <!--shopping cart section-->
+        <div id="cart-popup" class="cart-popup">
+            <h4>Shopping Cart</h4>
+            <table id="cart-item">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>#</th>
+                        <th>Prise(Rs)</th>
+                        <th>Total(Rs)</th>
+                    </tr>
+                </thead>
+            </table>
+            <p>Total(Rs) <span id="cart-total">0.00</span></p>
+            <a class="cart-close" onclick="closeCart()"><ion-icon name="close-circle-outline"></ion-icon></a>
+          </div>
+
+        <!-- Main menus / order -->
+        <div class="main-menus">
+            <h2 class="main-title">Select Your Cuisine</h2>
+            <div class="cuisine-wrapper">
+                <!-- Northern Cuisine -->
+                <div class="cuisine-card">
+                    <img class="cuisine-img" src="images/thali/north.png" alt="Northern Cuisine">
+                    <div class="cuisine-desc">
+                        <h4>Northern Cuisine</h4>
+                        <a href="northerncuisine.html">View Menu</a>
+                    </div>
+                </div>
+                <!-- Maharashtrian Cuisine -->
+                <div class="cuisine-card">
+                    <img class="cuisine-img" src="images/thali/maharashtra.jpeg" alt="Marathi Cuisine">
+                    <div class="cuisine-desc">
+                        <h4>Maharashtrian Cuisine</h4>
+                        <a href="maharashtracuisine.html">View Menu</a>
+                    </div>
+                </div>
+                <!-- South Indian Cuisine -->
+                <div class="cuisine-card">
+                    <img class="cuisine-img" src="images/thali/south.jpg" alt="South Indian Cuisine">
+                    <div class="cuisine-desc">
+                        <h4>South Indian Cuisine</h4>
+                        <a href="southindiacuisine.html">View Menu</a>
+                    </div>
+                </div>
+                <!-- Gujarati Cuisine -->
+                <div class="cuisine-card">
+                    <img class="cuisine-img" src="images/thali/guj western.avif" alt="Gujarati Cuisine">
+                    <div class="cuisine-desc">
+                        <h4>Gujarati Cuisine</h4>
+                        <a href="gujraticuisine.html">View Menu</a>
+                    </div>
+                </div>
+                <!-- Rajasthani Cuisine -->
+                <div class="cuisine-card">
+                    <img class="cuisine-img" src="images/thali/rajasthan.webp" alt="Rajasthani Cuisine">
+                    <div class="cuisine-desc">
+                        <h4>Rajasthani Cuisine</h4>
+                        <a href="rajasthanicuisine.html">View Menu</a>
+                    </div>
+                </div>
+                <!-- Punjabi Cuisine -->
+                <div class="cuisine-card">
+                    <img class="cuisine-img" src="images/thali/punjabb.webp" alt="Punjabi Cuisine">
+                    <div class="cuisine-desc">
+                        <h4>Punjabi Cuisine</h4>
+                        <a href="punjabicuisine.html">View Menu</a>
+                    </div>
+                </div>
+                <!-- Bengali Cuisine -->
+                <div class="cuisine-card">
+                    <img class="cuisine-img" src="images/thali/bengal thali.jpeg" alt="Bengali Cuisine">
+                    <div class="cuisine-desc">
+                        <h4>Bengali Cuisine</h4>
+                        <a href="bengalicuisine.html">View Menu</a>
+                    </div>
+                </div>
+                <!-- Chinese Cuisine -->
+                <div class="cuisine-card">
+                    <img class="cuisine-img" src="images/thali/chinese thali.webp" alt="Chinese Cuisine">
+                    <div class="cuisine-desc">
+                        <h4>Chinese Cuisine</h4>
+                        <a href="chinesecuisine.html ">View Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

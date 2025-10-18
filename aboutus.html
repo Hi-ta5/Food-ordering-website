@@ -1,0 +1,213 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Food menu page</title>
+</head>
+<body>
+    <!--side bars-->
+    <div class="sidebar">
+        <img src="images/logo.jpg" alt="img">
+        
+        <div class="sidebar-menu">
+            <a href="index.html"><ion-icon name="storefront-outline"></ion-icon>Home</a>
+            <a href="contact_us.html"><ion-icon name="chatbubbles-outline"></ion-icon>Contact Us</a>
+            <a href="aboutus.html"><ion-icon name="people"></ion-icon>About Us</a>
+            <a href="thaliservice.html"><ion-icon name="home-outline"></ion-icon>Thali Service</a>
+            
+        </div>
+        <div class="logout"></div>
+    </div>
+    <!-- main -->
+    <div class="main">
+        <!-- main  navbar -->
+         <div class="main-navbar">
+            <!-- menu when appear  on mobile version-->
+             <ion-icon class="menu-toggle" name="menu-outline"></ion-icon>
+             <!-- search bar-->
+              <div class="search">
+                <input type="text" placeholder="What you want to eat?" id="searchInput">
+                <button class="search-btn" id="searchButton">Search</button>
+                <div class="result"></div>
+              </div>
+              <!-- profile icon on left side of navbar-->
+               <div class="profile">
+                    <a class="user" href="#"><ion-icon name="person-add-outline"></ion-icon></a>
+                    <a class="cart" href="#" onclick="toggleCartPopup()">
+                        <ion-icon name="cart-outline"></ion-icon>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </a>
+                    <a class="user" href="login.html"><ion-icon name="person-outline"></ion-icon> </a>               
+                </div>
+          </div>
+          <!--shopping cart section-->
+          <div id="cart-popup" class="cart-popup">
+            <h4>Shopping Cart</h4>
+            <table id="cart-item">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>#</th>
+                        <th>Prise(Rs)</th>
+                        <th>Total(Rs)</th>
+                    </tr>
+                </thead>
+            </table>
+            <p>Total(Rs) <span id="cart-total">0.00</span></p>
+            <a class="cart-close" onclick="closeCart()"><ion-icon name="close-circle-outline"></ion-icon></a>
+          </div>
+
+    <div class="about-us-section" style="display: flex; align-items: center; margin: 40px 0;">
+    <div style="flex: 1; padding: 20px;">
+        <link rel="stylesheet" href="aboutus.css">
+
+        <h2 class="main-heading">WHY CHOOSE US</h2>
+        <p class="intro-text">Welcome to our restaurant, where passion meets flavor. We pride ourselves on offering an exceptional dining experience that combines quality ingredients, culinary expertise, and a warm, inviting atmosphere.</p>
+        
+        <button class="toggle-btn" onclick="toggleSection('core-values')">Our Core Values</button>
+        <div id="core-values" class="section-content">
+            <h3 class="sub-heading">Our Core Values</h3>
+            <ul class="styled-list">
+                <li><strong>Freshness:</strong> We use locally-sourced, fresh ingredients to ensure top-quality dishes.</li>
+                <li><strong>Sustainability:</strong> Supporting eco-friendly practices and local farms.</li>
+                <li><strong>Customer Satisfaction:</strong> Delivering impeccable service and memorable experiences.</li>
+            </ul>
+        </div>
+        
+
+        <button class="toggle-btn" onclick="toggleSection('sets-apart')">What Sets Us Apart</button>
+        <div id="sets-apart" class="section-content">
+            <h3 class="sub-heading">What Sets Us Apart</h3>
+            <p>What makes us unique is our commitment to blending tradition with innovation in every recipe, creating dishes that are truly one-of-a-kind. Our signature meals, crafted with precision and passion, keep customers coming back for more.</p>
+        </div>
+
+        <button class="toggle-btn" onclick="toggleSection('team-chef')">Our Team and Chef</button>
+        <div id="team-chef" class="section-content">
+            <h3 class="sub-heading">Our Team and Chef</h3>
+            <p>Led by our renowned head chef, Chef Maria, who brings over 15 years of international culinary experience, our team is dedicated to delivering culinary excellence.</p>
+        </div>
+    </div>
+    <div style="flex: 1;">
+        <img src="images/delivery.png" alt="Delicious Food" style="width: 100%; border-radius: 8px;">
+    </div>
+</div>
+<!-- Get in Touch Section -->
+<div class="get-in-touch">
+    <span class="line"></span>
+    <h2 class="get-in-touch-heading">GET IN TOUCH WITH US</h2>
+    <span class="line"></span>
+</div>
+
+
+ <!-- Back to Home Button -->
+ <div style="text-align: center; margin-top: 40px;">
+    <button class="back-home-btn" onclick="location.href='index.html';">Back to Home</button>
+</div>
+</div>
+
+<style>
+/* Back to Home Button Styling */
+.back-home-btn {
+    background-color: #f1c40f; /* Yellow */
+    color: #fff; /* White text */
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.back-home-btn:hover {
+    background-color: #f39c12; /* Darker yellow on hover */
+}
+</style>
+
+<style>
+    /* General Styling */
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('D:\CODE\foodie\M.P3.0\M.P\M.P\bg2.0.jpeg'); /* Replace with your image path */
+        background-size: cover; /* Ensures the image covers the entire background */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        background-position: center; /* Centers the image */
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+    }
+
+    .main-heading {
+        font-size: 2.5em;
+        font-weight: bold;
+        color: #d35400; /* Vibrant orange */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .intro-text {
+        font-size: 1.2em;
+        color: #555;
+        margin-bottom: 30px;
+        text-align: justify;
+    }
+
+    .sub-heading {
+        font-size: 1.8em;
+        color: #2980b9; /* Cool blue */
+        margin-top: 20px;
+    }
+
+    .styled-list {
+        margin-left: 20px;
+        font-size: 1.1em;
+    }
+
+    .styled-list li {
+        margin-bottom: 10px;
+    }
+
+    /* Button Styling */
+    .toggle-btn {
+        display: block;
+        margin: 20px 0;
+        padding: 10px 20px;
+        font-size: 1em;
+        color: white;
+        background-color: #27ae60; /* Green */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .toggle-btn:hover {
+        background-color: #2ecc71; /* Lighter green */
+    }
+
+    /* Section Content Styling */
+    .section-content {
+        display: none;
+        padding: 15px;
+        background-color: #ecf0f1; /* Light gray */
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    .section-content p,
+    .section-content ul {
+        color: #2c3e50; /* Deep blue-gray */
+    }
+</style>
+
+<script>
+    function toggleSection(id) {
+        const section = document.getElementById(id);
+        section.style.display = section.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

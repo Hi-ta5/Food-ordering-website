@@ -1,0 +1,141 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-image: url('bg2.0.jpeg'); /* Add your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #333; /* Text color for readability */
+}
+
+/* About Us Section */
+.about-us-section {
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
+    border-radius: 10px;
+    padding: 40px;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    overflow: hidden;
+}
+/* Get In Touch Section */
+.get-in-touch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px; /* Space above the section */
+    margin-bottom: 20px; /* Space below the section */
+}
+
+
+
+.line {
+    display: inline-block;
+    width: 50px; /* Adjust line length */
+    height: 2px; /* Adjust line thickness */
+    background-color: #e74c3c; /* Red color for the line */
+}
+
+
+/* Main Heading */
+.main-heading {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: #d35400; /* Vibrant orange */
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Introductory Text */
+.intro-text {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* Sub Headings */
+.sub-heading {
+    font-size: 1.8em;
+    color: #2980b9; /* Cool blue */
+    margin-top: 30px;
+    text-transform: capitalize;
+    border-left: 4px solid #2980b9; /* Blue accent */
+    padding-left: 10px;
+}
+
+/* Styled Lists */
+.styled-list {
+    margin-left: 20px;
+    font-size: 1.1em;
+    color: #2c3e50; /* Deep blue-gray */
+}
+
+.styled-list li {
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.toggle-btn,
+.back-home-btn {
+    display: inline-block;
+    background-color: #f1c40f; /* Yellow */
+    color: white;
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Section Content */
+.section-content {
+    display: none; /* Initially hidden */
+    padding: 20px;
+    background-color: rgba(236, 240, 241, 0.9); /* Light gray with transparency */
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Slight shadow for focus */
+    color: #2c3e50; /* Text color */
+}
+
+/* Centered Image */
+.centered-image {
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for pop-out effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-us-section {
+        padding: 20px;
+    }
+
+    .main-heading {
+        font-size: 2.2em;
+    }
+
+    .sub-heading {
+        font-size: 1.5em;
+    }
+
+    .intro-text {
+        font-size: 1em;
+    }
+}

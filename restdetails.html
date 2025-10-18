@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Details</title>
+    <link rel="stylesheet" href="partner_with_us.css">
+</head>
+
+<body>
+    <header>
+        <div class="image-container">
+            <img
+                src="https://media.gettyimages.com/id/1363885085/video/defocussed-image-of-two-business-women-meeting-and-having-a-discussion.jpg?s=640x640&k=20&c=0rEVTq-s0lY0756u6LNBE76KWybXzHguOmS4mgN7Lv8=">
+        </div>
+        <div class="image-overlay">
+            <h1>Provide Your Restaurant Details</h1>
+        </div>
+    </header>
+    <section id="restaurant-details">
+        <div class="rest-container">
+            <form id="restaurantForm">
+                <input type="text" id="restaurantName" placeholder="Restaurant Name" required>
+                <input type="text" id="ownerName" placeholder="Owner's Name" required>
+                <input type="text" id="address" placeholder="Address" required>
+                <input type="number" id="contact" placeholder="Contact Number" required>
+                <button type="submit" id="submit">Register Restaurant</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js"></script>
+    <script>
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAdFlb844UkqgcCDqVRWUe9wPiVYx70AoQ",
+            authDomain: "trail-c08f8.firebaseapp.com",
+            projectId: "trail-c08f8",
+            storageBucket: "trail-c08f8.firebasestorage.app",
+            messagingSenderId: "327074039132",
+            appId: "1:327074039132:web:52be090e15060573022d99"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        // Handle restaurant details submission
+        const restaurantForm = document.getElementById('restaurantForm');
+
+        restaurantForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const restaurantName = document.getElementById('restaurantName').value;
+            const ownerName = document.getElementById('ownerName').value;
+            const address = document.getElementById('address').value;
+            const contact = document.getElementById('contact').value;
+
+            console.log(restaurantName, ownerName, addres );
+
+            db.collection("restaurants").add({
+                restaurantName,
+                ownerName,
+                address,
+                contact
+
+                
+                
+            })
+                .then(() => {
+                    alert('Restaurant details submitted successfully!');
+                })
+                .catch((error) => {
+                    alert(error.message);
+                });
+        });
+
+    </script>
+</body>
+
+</html>
